@@ -23,12 +23,12 @@ The primary goal of this project is to build a machine learning model that can  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## The Data
-For this project, we will be using a mix of image data from various data sources all bundled into one folder. The dataset is a combination of the three datasets: figshare, SARTAJ dataset and the Br35H dataset. The dataset was combined collected from __[Kaggle.](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)__ The dataset contains 7023 MRI images of brain tumours classified into glioma, meningioma, pituitary and non-tumor. Images are already sorted and arranged to train and test folders within the **Data** directory.
+For this project, we will be using a mix of image data from various data sources all bundled into one folder. The dataset is a combination of three datasets: figshare, SARTAJ dataset and the Br35H dataset. The dataset was combined and collected from __[Kaggle.](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)__ The dataset contains 7023 MRI images of brain tumours classified into glioma, meningioma, pituitary and non-tumor. Images are already sorted and arranged to train and test folders within the **Data** directory.
 
-**Important:** Dataset contains various image sizes and dimensions, not all images are the same size. Dataset also contains MRI scans taken from different angles and brain segments. 
+**Important:** Dataset contains various image sizes and dimensions, not all images are the same size. The dataset also contains MRI scans taken from different angles and brain segments. 
 
 <h4 id="sample_image"> Sample Data Image </h2>
-<img src="images/MRI_Sample _Images width="600" height="600">
+<img src="images/MRI_Sample_Images width="600" height="600">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
