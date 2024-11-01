@@ -2,7 +2,8 @@
 <br />
 <div align="center">
 
- # 🧠 NeuroDetect: Automated Brain Tumour Detection & Classification  🧠
+ # 🧠 NeuroDetect 🧠
+ ### An Automated Brain Tumour Detection & Classification 
 </div>
     
 ## Project Overview
