@@ -43,5 +43,11 @@ For this project, we will be using a mix of image data from various data sources
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## References
-### ...
+Cheng, Jun (2017). brain tumor dataset. figshare. Dataset. https://doi.org/10.6084/m9.figshare.1512427.v5
+
+Msoud Nickparvar. (2021). Brain Tumor MRI Dataset [Data set]. Kaggle. https://doi.org/10.34740/KAGGLE/DSV/2645886
+
+Sartaj Bhuvaji, Ankita Kadam, Prajakta Bhumkar, Sameer Dedge, and Swati Kanchan. (2020). Brain Tumor Classification (MRI) [Data set]. Kaggle. https://doi.org/10.34740/KAGGLE/DSV/1183165
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
