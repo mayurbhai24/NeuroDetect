@@ -28,15 +28,19 @@ For this project, we will be using a mix of image data from various data sources
 **Important:** Dataset contains various image sizes and dimensions, not all images are the same size. The dataset also contains MRI scans taken from different angles and brain segments. 
 
 <h4 id="sample_image"> Sample Data Image </h2>
-<img src="images/MRI_Sample_Images width="600" height="600">
+<img src="images/MRI_Sample_Images.PNG" width=600 height=600>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Models, Analysis, EDA
 ### ...
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Conclusion
 ### ...
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## References
 ### ...
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
