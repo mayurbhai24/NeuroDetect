@@ -33,7 +33,7 @@ Exploratory data analysis (EDA) was conducted to understand the distribution of 
 
 **Important:** During the EDA, we noticed that the dataset contains various image sizes and dimensions, not all images are the same size. The dataset also contains MRI scans taken from different angles and brain segments. This is key when it comes to preporcessing and modelling our data as it could cause problems for our model. We can see the different image size and angles taken below.
 
-<h4 id="sample_image"> Sample Data Image </h2>
+<h4 id="sample_image"> Sample Data Image </h4>
 <img src="images/MRI_Sample_Images.PNG" width=600 height=600>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -73,7 +73,7 @@ The results were the following for baseline accuracy:
 | Random Forest      | 83.96%         | 75.97%        |
 | Convolutional Neural Network (CNN) | 95.95% | 90.69% |
 
-The baseline accuracy results show that the Convolutional Neural Network (CNN) outperformed all other models, achieving a high training accuracy of 95.95% and a test accuracy of 90.69%, making it the most robust model for brain tumor classification. The Support Vector Machine (SVM) followed closely with a training accuracy of 92.49% and a test accuracy of 88.33%, indicating solid performance with less overfitting than Logistic Regression. The Random Forest model performed the worst, with a training accuracy of 83.96% and test accuracy of 75.97%, indicating significant overfitting and poor generalization.
+The baseline accuracy results show that the Convolutional Neural Network (CNN) outperformed all other models, achieving a high training accuracy of 95.95% and a test accuracy of 90.69%. The Support Vector Machine (SVM) followed closely with a training accuracy of 92.49% and a test accuracy of 88.33%, indicating solid performance with less overfitting than Logistic Regression. The Random Forest model performed the worst, with a training accuracy of 83.96% and test accuracy of 75.97%, indicating significant overfitting and poor generalization.
 
 The results were the following for recall scores:
 | Model                         | No Tumor Recall | Pituitary Recall | Glioma Recall | Meningioma Recall |
@@ -85,11 +85,11 @@ The results were the following for recall scores:
 
 In terms of recall, CNN achieved the highest recall for "No Tumor" (99%) and performed well on "Glioma" (93%) but struggled with "Meningioma" (68%). SVM also performed well, especially on "No Tumor" (97%) and "Pituitary" (97%), and showed better results than Logistic Regression and CNN for "Meningioma" (75%). Random Forest had a very low recall for both "Glioma" (63%) and "Meningioma" (51%).  
 
-Confusion Matrix:
+<h4 id="confusion_matrix"> Confusion Matrix </h4>
+<img src="images/Confusion_Matrix.png" width=800 height=800>
 
-<h4 id="confusion_matrix"> Confusion Matrix </h2>
-<img src="images/Confusion_Matrix.PNG" width=600 height=600>
 
+The confusion matrix highlights the misclassification patterns of each model, with a consistent trend across all four baseline models: the "Meningioma" tumour class is frequently misclassified. This recurring issue underscores the need for further model refinement to improve the accurate identification of this challenging tumour type.
 
 Overall, the CNN model emerged as the best-performing model (which is to be expected), while the Random Forest model was the worst. The most interesting about this is how well SVM performed for a non-deep learning model, to the point where it even performed better at recalling Meningioma compared to CNN. 
 
