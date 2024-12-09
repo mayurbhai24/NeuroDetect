@@ -139,12 +139,12 @@ While ResNet50 improved classification speed and demonstrated high accuracy, it 
 The confusion matrix reveals the misclassification patterns of both models. Both models perform well in classifying "no tumor" and "pituitary" images. However, the Advanced CNN model outperforms the ResNet50 model overall. Interestingly, each model struggles with a different tumor class. The Advanced CNN model misclassified 16 "meningioma" images as "glioma," while the ResNet50 model misclassified 27 "glioma" images as "meningioma." This highlights the challenge both models face in distinguishing between these two tumor types.
 
 <h4 id=“incorrect_classification”> CNN Advance Model Incorrect Classificatiox </h4>
-<img src=“images/CNN_Advance_Model_Incorrect_Classification.png” width=800 height=800>
+<img src=“images/CNN_Advance_Model_Incorrect_Classification.PNG” width=800 height=800>
 
 Across all models, a consistent challenge was the misclassification of meningioma and glioma tumor classes. This issue arises because both tumor types exhibit large, visually prominent masses that the model struggles to differentiate. In many cases, meningioma images were misclassified as glioma and vice versa. This reflects a real-world challenge, as glioma and meningioma tumors often have similar shapes and sizes, making them difficult to distinguish even for medical professionals.
 
 <h4 id=“grad_cam”> ResNet50 Grad-Cam</h4>
-<img src=“images/ResNet50_GradCam_Image.png” width=800 height=800>
+<img src=“images/ResNet50_GradCam_Image.PNG” width=800 height=800>
 
 Applying Grad-CAM to our 'pituitary' test image, we can see that the model successfully identified the tumor's location and correctly predicted its type. The dark red region highlights the area where the model detected an anomaly, providing a visual representation of its focus during classification. This is a great sign, indicating our model is working and performing execeptional. 
 
