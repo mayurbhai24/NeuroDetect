@@ -33,8 +33,10 @@ Exploratory data analysis (EDA) was conducted to understand the distribution of 
 
 **Important:** During the EDA, we noticed that the dataset contains various image sizes and dimensions, not all images are the same size. The dataset also contains MRI scans taken from different angles and brain segments. This is key when it comes to preporcessing and modelling our data as it could cause problems for our model. We can see the different image size and angles taken below.
 
+<div align="center">
 <h4 id="sample_image"> Sample Data Image </h4>
 <img src="images/MRI_Sample_Images.PNG" width=600 height=600>
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -65,7 +67,8 @@ In this project, we used both deep learning and non-deep learning models for bra
 #### Baseline Model Results 
 
 The results were the following for baseline accuracy:
-
+<div align="center">
+ 
 | Model             | Train Accuracy | Test Accuracy |
 |:-------------------:|:----------------:|:---------------:|
 | Logistic Regression | 89.74%         | 81.46%        |
@@ -73,9 +76,13 @@ The results were the following for baseline accuracy:
 | Random Forest      | 83.96%         | 75.97%        |
 | Convolutional Neural Network (CNN) | 95.95% | 90.69% |
 
+</div>
+
 The baseline accuracy results show that the Convolutional Neural Network (CNN) outperformed all other models, achieving a high training accuracy of 95.95% and a test accuracy of 90.69%. The Support Vector Machine (SVM) followed closely with a training accuracy of 92.49% and a test accuracy of 88.33%, indicating solid performance with less overfitting than Logistic Regression. The Random Forest model performed the worst, with a training accuracy of 83.96% and test accuracy of 75.97%, indicating significant overfitting and poor generalization.
 
 The results were the following for recall scores:
+<div align="center">
+ 
 | Model                         | No Tumor Recall | Pituitary Recall | Glioma Recall | Meningioma Recall |
 |:-------------------------------:|:-----------------:|:------------------:|:---------------:|:-------------------:|
 | Logistic Regression            | 95%             | 95%              | 71%           | 61%               |
@@ -83,11 +90,14 @@ The results were the following for recall scores:
 | Random Forest                  | 93%             | 92%              | 63%           | 51%               |
 | Convolutional Neural Network (CNN) | 99% | 95% | 93% | 68% |
 
+</div>
+
 In terms of recall, CNN achieved the highest recall for "No Tumor" (99%) and performed well on "Glioma" (93%) but struggled with "Meningioma" (68%). SVM also performed well, especially on "No Tumor" (97%) and "Pituitary" (97%), and showed better results than Logistic Regression and CNN for "Meningioma" (75%). Random Forest had a very low recall for both "Glioma" (63%) and "Meningioma" (51%).  
 
+<div align="center">
 <h4 id="confusion_matrix"> Confusion Matrix </h4>
 <img src="images/Confusion_Matrix.png" width=800 height=800>
-
+</div>
 
 The confusion matrix highlights the misclassification patterns of each model, with a consistent trend across all four baseline models: the "Meningioma" tumour class is frequently misclassified. This recurring issue underscores the need for further model refinement to improve the accurate identification of this challenging tumour type.
 
@@ -118,33 +128,48 @@ To improve performance, we unfroze the last 20 layers of ResNet50, allowing thes
 #### Advance Model Results 
 The results were the following for Advance Model accuracy:
 
+<div align="center">
+ 
 | Model             | Train Accuracy | Test Accuracy |
 |:-------------------:|:----------------:|:---------------:|
 | Convolutional Advanced Neural Network | 98.76%         | 96.49%       |
 | ResNet50 Model | 92.66% | 91.62% |
 
+</div>
+ 
 The results were the following for recall scores:
+
+<div align="center">
+ 
 | Model                         | No Tumor Recall | Pituitary Recall | Glioma Recall | Meningioma Recall |
 |:-------------------------------:|:-----------------:|:------------------:|:---------------:|:-------------------:|
 | Convolutional Advanced Neural Network | 100% | 100% | 98% | 87% |
 | ResNet50 Model | 100% | 96% | 81% | 86% |
 
+</div>
+
 The advanced CNN model achieved a test accuracy of 96.49% while the ResNet50 Model had an accuracy of 91.62%, indicating that both Advance models performed really well. The models excelled in predicting the 'pituitary' and 'no tumor' classes, achieving strong precision and recall scores of around 96-100%. Notably, the Advance CNN model showed significant improvement in detecting 'meningioma,' with its recall score increasing to 87% compared to 68% in the baseline model. The ResNet50 model performed quite well as well. Detecting 'meningioma,' yielded a recall score of 86%. The 'glioma' class also had a relatively decent recall score of 81%.
 
 While ResNet50 improved classification speed and demonstrated high accuracy, it did not outperform the Advanced CNN model due to domain-specific differences between general image datasets (like ImageNet) and medical images (like MRI scans).
 
-<h4 id=“advance_confusion_matrix”> Advance Model Confusion Matrix </h4>
-<img src=“images/Advance_Model_Confusion_Matrix.png” width=800 height=800>
+<div align="center">
+<h4 id="advance_confusion_matrix"> Advance Model Confusion Matrix </h4>
+<img src="images/Advance_Model_Confusion_Matrix.png" width=1000 height=600>
+</div>
 
 The confusion matrix reveals the misclassification patterns of both models. Both models perform well in classifying "no tumor" and "pituitary" images. However, the Advanced CNN model outperforms the ResNet50 model overall. Interestingly, each model struggles with a different tumor class. The Advanced CNN model misclassified 16 "meningioma" images as "glioma," while the ResNet50 model misclassified 27 "glioma" images as "meningioma." This highlights the challenge both models face in distinguishing between these two tumor types.
 
-<h4 id=“incorrect_classification”> CNN Advance Model Incorrect Classificatiox </h4>
-<img src=“images/CNN_Advance_Model_Incorrect_Classification.PNG” width=800 height=800>
+<div align="center">
+<h4 id="incorrect_classification"> CNN Advance Model Incorrect Classificatiox </h4>
+<img src="images/CNN_Advance_Model_Incorrect_Classification.PNG" width=1200 height=800>
+</div>
 
 Across all models, a consistent challenge was the misclassification of meningioma and glioma tumor classes. This issue arises because both tumor types exhibit large, visually prominent masses that the model struggles to differentiate. In many cases, meningioma images were misclassified as glioma and vice versa. This reflects a real-world challenge, as glioma and meningioma tumors often have similar shapes and sizes, making them difficult to distinguish even for medical professionals.
 
-<h4 id=“grad_cam”> ResNet50 Grad-Cam</h4>
-<img src=“images/ResNet50_GradCam_Image.PNG” width=800 height=800>
+<div align="center">
+<h4 id="grad_cam"> ResNet50 Grad-Cam</h4>
+<img src="images/ResNet50_GradCam_Image.PNG" width=800 height=400>
+</div>
 
 Applying Grad-CAM to our 'pituitary' test image, we can see that the model successfully identified the tumor's location and correctly predicted its type. The dark red region highlights the area where the model detected an anomaly, providing a visual representation of its focus during classification. This is a great sign, indicating our model is working and performing execeptional. 
 
@@ -153,6 +178,8 @@ Applying Grad-CAM to our 'pituitary' test image, we can see that the model succe
 ## Conclusion
 In terms of overall performance, the Advanced CNN model emerged as the best model for image classification. It achieved a test accuracy of approximately 96% and delivered excellent recall scores across all classification groups. Below are the results for all the models:
 
+<div align="center">
+ 
 | Model             | Train Accuracy | Test Accuracy |
 |:-------------------:|:----------------:|:---------------:|
 | Logistic Regression | 89.74%         | 81.46%        |
@@ -162,8 +189,12 @@ In terms of overall performance, the Advanced CNN model emerged as the best mode
 | Convolutional Advanced Neural Network | 98.76% | 96.49% |
 | ResNet50 Model | 92.66% | 91.62% |
 
+</div>
+
 Now lets compare the recall scores for each classifcation for all the models.
 
+<div align="center">
+ 
 | Model                         | No Tumor Recall | Pituitary Recall | Glioma Recall | Meningioma Recall |
 |:-------------------------------:|:-----------------:|:------------------:|:---------------:|:-------------------:|
 | Logistic Regression            | 95%             | 95%              | 71%           | 61%               |
@@ -172,6 +203,8 @@ Now lets compare the recall scores for each classifcation for all the models.
 | Convolutional Baseline Neural Network | 99% | 95% | 93% | 68% |
 | Convolutional Advanced Neural Network | 100% | 100% | 98% | 87% |
 | ResNet50 Model | 100% | 96% | 81% | 86% |
+
+</div>
 
 After training and testing multiple models, our Advanced CNN model demonstrated the best overall performance and is ready for production.
 
