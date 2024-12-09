@@ -22,6 +22,7 @@ This project is inspired by that question. **Using machine learning, how can we 
 5. [Baseline Models](#baseline-models)
 6. [Model Improvement and Hyperparameter Tuning](#model-improvement-and-hyperparameter-tuning)
 7. [Conclusion](#conclusion)
+8. [References](#references)
 
 
 ## Project Goal
@@ -66,6 +67,8 @@ For Non-Deep Learning Models:
 2. **Grayscale Conversion & Resizing**: Like the CNN preprocessing, the images were converted to grayscale and resized for consistency.
 3. **Flattening**: To make the images interpretable by non-deep learning models (such as Logistic Regression, SVM, and Random Forest), the images were flattened into a one-dimensional array. This transformation allows these models, which cannot inherently handle image data, to process the pixel data as input features.
 4. **Feature Scaling**: The pixel values were normalized to fall between 0 and 1 to ensure the models perform optimally by avoiding large values that could dominate model learning. 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Baseline Models
 In this project, we used both deep learning and non-deep learning models for brain tumor classification. The models were trained to detect the presence of tumors and identify their types (glioma, meningioma, pituitary, or no tumor). The purpose of using both methods of modeling as a baseline is to understand how various models perform in image classification. The four main models that were trained are:
