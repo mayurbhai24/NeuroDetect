@@ -13,6 +13,17 @@ This project is inspired by that question. **Using machine learning, how can we 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Table of Contents
+
+1. [Project Goal](#project-goal)
+2. [The Data](#the-data)
+3. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+4. [Preprocessing](#preprocessing)
+5. [Baseline Models](#baseline-models)
+6. [Model Improvement and Hyperparameter Tuning](#model-improvement-and-hyperparameter-tuning)
+7. [Conclusion](#conclusion)
+
+
 ## Project Goal
 The primary goal of this project is to build a machine learning model that can  **accurately detect the presence of a tumour in an MRI image and identify the tumour type.**  This model aims to enhance the efficiency and precision of brain tumour diagnosis, supporting radiologists, surgeons, and researchers by:
 
