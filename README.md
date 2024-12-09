@@ -174,7 +174,7 @@ While ResNet50 improved classification speed and demonstrated high accuracy, it 
 The confusion matrix reveals the misclassification patterns of both models. Both models perform well in classifying "no tumor" and "pituitary" images. However, the Advanced CNN model outperforms the ResNet50 model overall. Interestingly, each model struggles with a different tumor class. The Advanced CNN model misclassified 16 "meningioma" images as "glioma," while the ResNet50 model misclassified 27 "glioma" images as "meningioma." This highlights the challenge both models face in distinguishing between these two tumor types.
 
 <div align="center">
-<h4 id="incorrect_classification"> CNN Advance Model Incorrect Classificatiox </h4>
+<h4 id="incorrect_classification"> CNN Advance Model Incorrect Classification </h4>
 <img src="images/CNN_Advance_Model_Incorrect_Classification.PNG" width=1200 height=800>
 </div>
 
